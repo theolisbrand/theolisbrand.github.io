@@ -763,92 +763,103 @@ a.awilo_fn_circle_link:hover:after{
 #information .awilo_fn_services{
 	margin-bottom: 100px;
 }
+
 /*---------------------------------------------------*/
-/*	07) Shortcode: Skills
+/* 07) Shortcode: Skills
 /*---------------------------------------------------*/
-.awilo_fn_skills{
-	width: 100%;
-	float: left;
-	clear: both;
-	max-width: 808px;
-	transform: translateZ(0);
+
+.awilo_fn_skills {
+    width: 100%;
+    float: left;
+    clear: both;
+    max-width: 100%;
+    transform: translateZ(0);
 }
-.awilo_fn_skills .s_title{
-	margin-bottom: 46px;
+
+.awilo_fn_skills .s_title {
+    margin-bottom: 46px;
 }
-.awilo_fn_skills .s_title h3{
-	margin: 0;
-	padding: 0;
-	font-size: 30px;
-	color: #eee;
-	line-height: 40px;
-	font-weight: 400;
-	font-family: 'Muli';
+
+.awilo_fn_skills .s_title h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #eee;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: 'Muli';
 }
-.awilo_fn_skills .s_list ul{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+
+.awilo_fn_skills .s_list {
+    width: 100%;
+    float: left;
+    clear: both;
 }
-.awilo_fn_skills .s_list{
-	width: 100%;
-	float: left;
-	clear: both;
+
+.awilo_fn_skills .s_list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 20px;
 }
-.awilo_fn_skills .s_list ul li{
-	float: left;
-	margin: 0;
-	padding: 0;
-	margin-right: 20px;
-	margin-bottom: 20px;
+
+.awilo_fn_skills .s_list ul li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: none;
 }
-.awilo_fn_skills .s_list .sl_item{
-	width: 100%;
-	float: left;
-	clear: both;
-	padding: 0 20px;
-	height: 45px;
-	line-height: 45px;
-	border: 1px solid rgba(255,255,255,.1);
-	border-radius: 3px;
-	font-family: 'Muli';
-	font-size: 16px;
-	color: #eeeeee;
-	letter-spacing: 0;
+
+.awilo_fn_skills .s_list .sl_item {
+    width: 100%;
+    min-height: 52px;
+    height: auto;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 3px;
+    font-family: 'Muli';
+    font-size: 15px;
+    line-height: 1.4;
+    color: #eee;
+    letter-spacing: 0;
 }
-.awilo_fn_skills .s_list .sl_item label{
-	min-width: inherit;
-    margin-right: 40px;
+
+.awilo_fn_skills .s_list .sl_item label {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
     position: relative;
     font-weight: 300;
     display: block;
-	float: left;
-}
-.awilo_fn_skills .s_list .sl_item .text{
-	color: #777;
-}
-.awilo_fn_skills .s_list .sl_item label:after{
-	content: '';
-    width: 20px;
-    height: 1px;
-    background-color: #648de5;
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    margin-left: 10px;
-    margin-top: -1px;
+    float: none;
 }
 
-
-#information{
-	padding: 193px 0 180px 0;
+.awilo_fn_skills .s_list .sl_item label:after {
+    display: none;
 }
 
+.awilo_fn_skills .s_list .sl_item .text {
+    color: #648de5;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
 
+/* Mobile layout */
+@media(max-width: 768px) {
+    .awilo_fn_skills .s_list ul {
+        grid-template-columns: 1fr;
+    }
 
-
-#portfolio .awilo_fn_title{
-	margin-bottom: 100px;
+    .awilo_fn_skills .s_title h3 {
+        font-size: 25px;
+        line-height: 1.4;
+    }
 }
 
 /*---------------------------------------------------*/
