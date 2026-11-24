@@ -90,7 +90,7 @@ a.awilo_fn_circle_link:after{
     position: absolute;
     bottom: -2px;
     left: 100%;
-    background-color: #ae45ff;
+    background-color: #648de5;
 	
 	-webkit-transition: left .5s ease,width .5s ease;
 	   -moz-transition: left .5s ease,width .5s ease;
@@ -218,7 +218,7 @@ a.awilo_fn_circle_link:hover:after{
     transition: all .3s ease;
 }
 .awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a:hover{
-	color: #ae45ff;
+	color: #648de5;
 }
 .awilo_fn_sidebar_header .menu_nav ul.vert_nav li > a:before{
 	position: absolute;
@@ -292,7 +292,7 @@ a.awilo_fn_circle_link:hover:after{
 	text-align: center;
 }
 .awilo_fn_sidebar_header .social_list ul li a:hover{
-	color: #ae45ff;
+	color: #648de5;
 }
 /*---------------------------------------------------*/
 /*	00) HEADER
@@ -445,7 +445,7 @@ a.awilo_fn_circle_link:hover:after{
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
-	color: #ae45ff;
+	color: #648de5;
 	letter-spacing: 0;
 	font-family: 'Muli';
 	font-weight: 400;
@@ -456,7 +456,7 @@ a.awilo_fn_circle_link:hover:after{
 	padding: 0;
 	font-size: 72px;
 	line-height: 80px;
-	color: #ae45ff;
+	color: #648de5;
 	letter-spacing: -0.25px;
 	font-family: 'Rubik';
 	font-weight: 400;
@@ -487,7 +487,7 @@ a.awilo_fn_circle_link:hover:after{
 	float: left;
 	font-family: 'Muli';
 	text-decoration: none;
-	color: #ae45ff;
+	color: #648de5;
 	font-size: 16px;
 	border-radius: 2px;
 	max-width: 100%;
@@ -507,7 +507,7 @@ a.awilo_fn_circle_link:hover:after{
 	transition: all .4s ease;
 	float: left;
 	padding: 0 37px;
-	border: 2px solid #ae45ff;
+	border: 2px solid #648de5;
 }
 .awilo_fn_wrapper .awilo_fn_main_button span:nth-child(1){
 	transition: all .4s .2s ease;
@@ -567,7 +567,7 @@ a.awilo_fn_circle_link:hover:after{
 	transition: all .3s ease;
 }
 .awilo_fn_about .about_social a:hover{
-	color: #ae45ff;
+	color: #648de5;
 }
 .awilo_fn_about .about_right{
 	width: 50%;
@@ -643,7 +643,7 @@ a.awilo_fn_circle_link:hover:after{
 	padding: 0;
 	font-family: 'Muli';
 	font-size: 18px;
-	color: #ae45ff;
+	color: #648de5;
 	letter-spacing: 0;
 	margin-bottom: 20px;
 	font-weight: 400;
@@ -756,7 +756,7 @@ a.awilo_fn_circle_link:hover:after{
 	display: block;
 	float: left;
 	font-size: 16px;
-	color: #ae45ff;
+	color: #648de5;
 	line-height: 24px;
 	text-decoration: none;
 }
@@ -831,7 +831,7 @@ a.awilo_fn_circle_link:hover:after{
 	content: '';
     width: 20px;
     height: 1px;
-    background-color: #ae45ff;
+    background-color: #648de5;
     position: absolute;
     top: 50%;
     left: 100%;
@@ -974,7 +974,7 @@ a.awilo_fn_circle_link:hover:after{
 	transition: all .3s ease;
 }
 .awilo_fn_portfolio_grid .list_item .title_holder h3 a:hover{
-	color: #ae45ff;
+	color: #648de5;
 }
 .awilo_fn_portfolio_grid ul li.tmwide50 .list_item .title_holder h3,
 .awilo_fn_portfolio_grid ul li.tmwide66 .list_item .title_holder h3,
@@ -1121,7 +1121,7 @@ a.awilo_fn_circle_link:hover:after{
 	bottom: 14px;
 	left: 50%;
 	margin-left: -14px;
-	color: #ae45ff;
+	color: #648de5;
 }
 .awilo_fn_reviews .r_item .r_review{
 	margin-bottom: 32px;
@@ -1341,7 +1341,7 @@ a.awilo_fn_circle_link:hover:after{
 	font-size: 30px;
 	letter-spacing: 0;
 	margin: 0;
-	color: #ae45ff;
+	color: #648de5;
 	font-weight: 400;
 	position: absolute;
 	left: 0;
@@ -1457,7 +1457,7 @@ a.awilo_fn_circle_link:hover:after{
 	}
 	.awilo_fn_blog_list .blog_item:hover .title_wrapper .b_arrow .awilo_fn_svg,
 	.awilo_fn_blog_list .blog_item:hover .title_wrapper .title_holder h3 a{
-		color: #ae45ff;
+		color: #648de5;
 	}
 	.awilo_fn_blog_list .blog_item:hover .b_counter{
 		transform: translate3d(0px,0px,0px) scale(0);
@@ -1904,7 +1904,7 @@ a.awilo_fn_circle_link:hover:after{
 	position: absolute;
 	content: '';
 	left: 0;
-	background-color: #ae45ff;
+	background-color: #648de5;
 }
 .awilo_fn_partners .r_plus span:before{
 	width: 2px;
@@ -1914,7 +1914,7 @@ a.awilo_fn_circle_link:hover:after{
 	position: absolute;
 	content: '';
 	top: 0;
-	background-color: #ae45ff;
+	background-color: #648de5;
 }
 .awilo_fn_partners .r_item{
 	opacity: .3;
