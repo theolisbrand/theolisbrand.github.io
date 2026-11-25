@@ -262,10 +262,7 @@
                             var index = current - 1;
                             var activeSlide = container.find('.swiper-slide[data-swiper-slide-index="'+index+'"]');
 
-                            container.find('.r_item').removeClass('fn_vision');
-                            activeSlide.find('.r_item').addClass('fn_vision');
-                            activeSlide.next().find('.r_item').addClass('fn_vision');
-                            activeSlide.next().next().find('.r_item').addClass('fn_vision');
+                            container.find('.r_item').addClass('fn_vision');
 
                             // progress animation
                             var scale,translateX;
