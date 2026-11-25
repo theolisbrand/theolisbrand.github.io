@@ -2218,8 +2218,6 @@ a.awilo_fn_circle_link:hover:after{
 }
 
 
-/* SPACE BETWEEN CLIENTS SECTION AND FOOTER */
-#partners {
-    padding-bottom: 100px !important;
-}
+.awilo_fn_footer {
+    padding-top: 100px !important;
 }
