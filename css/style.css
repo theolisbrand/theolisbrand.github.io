@@ -2200,3 +2200,8 @@ a.awilo_fn_circle_link:hover:after{
         overflow-wrap: anywhere;
     }
 }
+
+/* SPACING BELOW CONTACT INFO LIST */
+.awilo_fn_info_list {
+    margin-bottom: 60px !important;
+}
