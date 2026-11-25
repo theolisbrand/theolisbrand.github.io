@@ -2246,3 +2246,10 @@ a.awilo_fn_circle_link:hover:after{
         white-space: normal !important;
     }
 }
+
+@media (min-width: 1024px) {
+    .awilo_fn_reviews .r_item,
+    .awilo_fn_partners .p_item {
+        opacity: 1 !important;
+    }
+}
