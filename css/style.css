@@ -2223,34 +2223,3 @@ a.awilo_fn_circle_link:hover:after{
 #big_text {
     padding-top: 100px !important;
 }
-
-/* FIX CLIENT REVIEWS ON MOBILE */
-@media (max-width: 767px) {
-
-    .awilo_fn_reviews .r_item_in {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
-    }
-
-    .awilo_fn_reviews .r_desc {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .awilo_fn_reviews .r_desc p {
-        font-size: 14px !important;
-        line-height: 1.6 !important;
-        width: 100% !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .awilo_fn_reviews .r_item,
-    .awilo_fn_partners .p_item {
-        opacity: 1 !important;
-    }
-}
