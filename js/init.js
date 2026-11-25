@@ -219,110 +219,178 @@
             }
         },
 
-        reviewSlider: function(){
-            $('.awilo_fn_reviews .r_list, .awilo_fn_partners .p_list').each(function(){
-                var element = $(this);
-                var container = element.find('.swiper-container');
+        
+reviewSlider: function(){
 
-                var mySwiper = new Swiper(container, {
-                    loop: true,
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    loopAdditionalSlides: 2,
+    // CLIENT REVIEWS
+    $('.awilo_fn_reviews .r_list').each(function(){
 
-                    autoplay: {
-                        delay: 8000,
-                    },
+        var element = $(this);
+        var container = element.find('.swiper-container');
 
-                    on: {
-                        init: function(){
-                            if(element.hasClass('r_list')){
-                                element.closest('.awilo_fn_reviews').addClass('ready');
-                            }else if(element.hasClass('p_list')){
-                                element.closest('.awilo_fn_partners').addClass('ready');
-                            }
-                        },
+        var mySwiper = new Swiper(container, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loopAdditionalSlides: 2,
 
-                        autoplayStop: function(){
-                            mySwiper.autoplay.start();
-                        },
+            autoplay: {
+                delay: 8000,
+            },
 
-                        slideChange: function () {
-                            Awilo.imgToSvg();
-                        },
-                    },
+            on: {
+                init: function(){
+                    element.closest('.awilo_fn_reviews').addClass('ready');
+                },
 
-                    pagination: {
-                        el: '.awilo_fn_swiper_progress',
-                        type: 'custom',
+                autoplayStop: function(){
+                    mySwiper.autoplay.start();
+                },
 
-                        renderCustom: function (swiper,current,total) {
+                slideChange: function(){
+                    Awilo.imgToSvg();
+                },
+            },
 
-                            // opacity
-                            var index = current - 1;
-                            var activeSlide = container.find('.swiper-slide[data-swiper-slide-index="'+index+'"]');
+            pagination: {
+                el: '.awilo_fn_swiper_progress',
+                type: 'custom',
 
-                            container.find('.r_item').removeClass('fn_vision');
-activeSlide.find('.r_item').addClass('fn_vision');
-activeSlide.next().find('.r_item').addClass('fn_vision');
-activeSlide.next().next().find('.r_item').addClass('fn_vision');
+                renderCustom: function(swiper, current, total){
 
-                            // progress animation
-                            var scale,translateX;
-                            var progressDOM = container.find('.awilo_fn_swiper_progress');
+                    var index = current - 1;
+                    var activeSlide = container.find('.swiper-slide[data-swiper-slide-index="'+index+'"]');
 
-                            if(progressDOM.hasClass('fill')){
-                                translateX = '0px';
-                                scale = parseInt((current/total)*100)/100;
-                            }else{
-                                scale = parseInt((1/total)*100)/100;
-                                translateX = (current-1) * parseInt((100/total)*100)/100 + 'px';
-                            }
+                    container.find('.r_item').removeClass('fn_vision');
+                    activeSlide.find('.r_item').addClass('fn_vision');
+                    activeSlide.next().find('.r_item').addClass('fn_vision');
+                    activeSlide.next().next().find('.r_item').addClass('fn_vision');
 
-                            progressDOM.find('.all span').css({
-                                transform:'translate3d('+translateX+',0px,0px) scaleX('+scale+') scaleY(1)'
-                            });
+                    var scale, translateX;
+                    var progressDOM = container.find('.awilo_fn_swiper_progress');
 
-                            if(current<10){current = '0' + current;}
-                            if(total<10){total = '0' + total;}
-
-                            progressDOM.find('.current').html(current);
-                            progressDOM.find('.total').html(total);
-                        }
-                    },
-
-                    breakpoints: {
-                        700: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        1200: {
-                            slidesPerView: 3,
-                            spaceBetween: 70,
-                        }
+                    if(progressDOM.hasClass('fill')){
+                        translateX = '0px';
+                        scale = parseInt((current/total)*100)/100;
+                    }else{
+                        scale = parseInt((1/total)*100)/100;
+                        translateX = (current-1) * parseInt((100/total)*100)/100 + 'px';
                     }
-                });
-            });
 
-            Awilo.imgToSvg();
-        },
+                    progressDOM.find('.all span').css({
+                        transform: 'translate3d('+translateX+',0px,0px) scaleX('+scale+') scaleY(1)'
+                    });
 
-        reviewWidth: function(){
-            $('.awilo_fn_review').each(function(){
-                var element = $(this);
-                var review = element.data('stars');
+                    if(current < 10){current = '0' + current;}
+                    if(total < 10){total = '0' + total;}
 
-                if(!review){
-                    review = 5;
+                    progressDOM.find('.current').html(current);
+                    progressDOM.find('.total').html(total);
                 }
+            }
+        });
 
-                var width = review * (100/5) + 1;
-                var pos = 100 - width;
+        var updateSliderLayout = function(){
 
-                element.find('.rating_relative').css({width:pos+'px'});
-                element.find('.rating_absolute').css({width:width+'px'});
-            });
-        },
+            var width = document.documentElement.clientWidth;
+
+            mySwiper.params.slidesPerView = width >= 1200 ? 3 : (width >= 700 ? 2 : 1);
+            mySwiper.params.spaceBetween = width >= 1200 ? 70 : (width >= 700 ? 20 : 0);
+
+            mySwiper.update();
+        };
+
+        updateSliderLayout();
+
+        $(window).on('resize orientationchange', updateSliderLayout);
+
+    });
+
+
+    // PARTNER LOGOS — ORIGINAL SETTINGS
+    $('.awilo_fn_partners .p_list').each(function(){
+
+        var element = $(this);
+        var container = element.find('.swiper-container');
+
+        var mySwiper = new Swiper(container, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loopAdditionalSlides: 2,
+
+            autoplay: {
+                delay: 8000,
+            },
+
+            on: {
+                init: function(){
+                    element.closest('.awilo_fn_partners').addClass('ready');
+                },
+
+                autoplayStop: function(){
+                    mySwiper.autoplay.start();
+                },
+
+                slideChange: function(){
+                    Awilo.imgToSvg();
+                },
+            },
+
+            pagination: {
+                el: '.awilo_fn_swiper_progress',
+                type: 'custom',
+
+                renderCustom: function(swiper, current, total){
+
+                    var index = current - 1;
+                    var activeSlide = container.find('.swiper-slide[data-swiper-slide-index="'+index+'"]');
+
+                    container.find('.r_item').removeClass('fn_vision');
+                    activeSlide.find('.r_item').addClass('fn_vision');
+                    activeSlide.next().find('.r_item').addClass('fn_vision');
+                    activeSlide.next().next().find('.r_item').addClass('fn_vision');
+
+                    var scale, translateX;
+                    var progressDOM = container.find('.awilo_fn_swiper_progress');
+
+                    if(progressDOM.hasClass('fill')){
+                        translateX = '0px';
+                        scale = parseInt((current/total)*100)/100;
+                    }else{
+                        scale = parseInt((1/total)*100)/100;
+                        translateX = (current-1) * parseInt((100/total)*100)/100 + 'px';
+                    }
+
+                    progressDOM.find('.all span').css({
+                        transform: 'translate3d('+translateX+',0px,0px) scaleX('+scale+') scaleY(1)'
+                    });
+
+                    if(current < 10){current = '0' + current;}
+                    if(total < 10){total = '0' + total;}
+
+                    progressDOM.find('.current').html(current);
+                    progressDOM.find('.total').html(total);
+                }
+            },
+
+            breakpoints: {
+                700: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 70,
+                }
+            }
+        });
+
+    });
+
+    Awilo.imgToSvg();
+},
+
 
         contactForm: function(){
             $('.awilo_fn_contact_sendbtn').on('click', function(){
