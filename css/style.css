@@ -2205,3 +2205,14 @@ a.awilo_fn_circle_link:hover:after{
 .awilo_fn_info_list {
     margin-bottom: 60px !important;
 }
+
+
+/* SPACE BETWEEN PROFESSIONAL AND VOLUNTEER EXPERIENCE */
+.awilo_fn_experience + .awilo_fn_experience {
+    margin-top: 70px !important;
+}
+
+/* SPACE BEFORE CLIENTS SECTION */
+.awilo_fn_info_list {
+    padding-bottom: 80px !important;
+}
