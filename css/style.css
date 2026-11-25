@@ -2145,3 +2145,18 @@ a.awilo_fn_circle_link:hover:after{
     position: relative;
     z-index: 10;
 }
+
+/* FormSubmit button styling */
+.awilo_fn_contact_form button.formsubmit_sendbtn {
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: transparent;
+    padding: 0;
+    outline: none;
+}
