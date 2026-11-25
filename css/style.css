@@ -2218,7 +2218,7 @@ a.awilo_fn_circle_link:hover:after{
 }
 
 
-/* SPACE ABOVE FOOTER */
-footer {
+/* SPACE BETWEEN CLIENTS AND LET'S WORK TOGETHER */
+#big_text {
     padding-top: 100px !important;
 }
