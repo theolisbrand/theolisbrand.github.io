@@ -2134,3 +2134,14 @@ a.awilo_fn_circle_link:hover:after{
         max-width: 100%;
     }
 }
+
+/* CONTACT FORM BUTTON FIX */
+.awilo_fn_contact_form button.awilo_fn_contact_sendbtn {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    font-family: inherit;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
