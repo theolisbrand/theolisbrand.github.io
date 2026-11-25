@@ -1200,8 +1200,9 @@ a.awilo_fn_circle_link:hover:after{
 	opacity: .3;
 	transition: all .5s ease;
 }
-.awilo_fn_reviews .r_item.fn_vision{
-	opacity: 1;
+.awilo_fn_reviews .r_item,
+.awilo_fn_partners .swiper-slide {
+    opacity: 1 !important;
 }
 .awilo_fn_reviews.ready .swiper-container{
 	overflow: visible;
