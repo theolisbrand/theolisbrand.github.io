@@ -248,16 +248,16 @@ reviewSlider: function(){
                     progressDOM.find('.total').html(total);
                 }
             },
-            breakpoints: isReview ? {
-                700: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-},
-1024: {
-    slidesPerView: 3,
-    spaceBetween: 30,
+            breakpoints: {
+    700: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+    },
+    1200: {
+        slidesPerView: 3,
+        spaceBetween: 70,
+    }
 }
-            } : {}
         });
     });
 
