@@ -184,11 +184,39 @@
 		},
 		
 		
+
 reviewSlider: function(){
-    $('.awilo_fn_reviews .r_list, .awilo_fn_partners .p_list').each(function(){
+
+    // CLIENT LOGOS — restore original behaviour
+    $('.awilo_fn_partners .p_list').each(function(){
         var element = $(this);
         var container = element.find('.swiper-container');
-        var isReview = element.hasClass('r_list');
+
+        new Swiper(container, {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loopAdditionalSlides: 2,
+            autoplay: {
+                delay: 8000,
+            },
+            breakpoints: {
+                700: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                }
+            }
+        });
+    });
+
+    // CLIENT REVIEWS
+    $('.awilo_fn_reviews .r_list').each(function(){
+        var element = $(this);
+        var container = element.find('.swiper-container');
 
         var mySwiper = new Swiper(container, {
             loop: true,
@@ -198,73 +226,32 @@ reviewSlider: function(){
             autoplay: {
                 delay: 8000,
             },
+            breakpoints: {
+                700: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
             on: {
                 init: function(){
-                    if(isReview){
-                        element.closest('.awilo_fn_reviews').addClass('ready');
-                    }else{
-                        element.closest('.awilo_fn_partners').addClass('ready');
-                    }
+                    element.closest('.awilo_fn_reviews').addClass('ready');
                 },
                 autoplayStop: function(){
                     mySwiper.autoplay.start();
                 },
                 slideChange: function(){
                     Awilo.imgToSvg();
-                },
-            },
-            pagination: {
-                el: '.awilo_fn_swiper_progress',
-                type: 'custom',
-                renderCustom: function(swiper, current, total){
-
-                    var index = current - 1;
-                    var activeSlide = container.find('.swiper-slide[data-swiper-slide-index="'+index+'"]');
-
-                    container.find('.r_item').removeClass('fn_vision');
-                    activeSlide.find('.r_item').addClass('fn_vision');
-                    activeSlide.next().find('.r_item').addClass('fn_vision');
-                    activeSlide.next().next().find('.r_item').addClass('fn_vision');
-
-                    var scale, translateX;
-                    var progressDOM = container.find('.awilo_fn_swiper_progress');
-
-                    if(progressDOM.hasClass('fill')){
-                        translateX = '0px';
-                        scale = parseInt((current/total)*100)/100;
-                    }else{
-                        scale = parseInt((1/total)*100)/100;
-                        translateX = (current-1) * parseInt((100/total)*100)/100 + 'px';
-                    }
-
-                    progressDOM.find('.all span').css({
-                        transform: 'translate3d('+translateX+',0px,0px) scaleX('+scale+') scaleY(1)'
-                    });
-
-                    if(current < 10){current = '0' + current;}
-                    if(total < 10){total = '0' + total;}
-
-                    progressDOM.find('.current').html(current);
-                    progressDOM.find('.total').html(total);
                 }
-            },
-            breakpoints: {
-    700: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-    },
-    1200: {
-        slidesPerView: 3,
-        spaceBetween: 70,
-    }
-}
+            }
         });
     });
 
     Awilo.imgToSvg();
 },
-
-		
 		
 		reviewWidth: function(){
 			$('.awilo_fn_review').each(function(){
