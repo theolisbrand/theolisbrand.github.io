@@ -799,49 +799,63 @@
 		<div class="awilo_fn_divider"></div>
 		<!-- /Divider -->
 		
-		<!-- Section: Contact -->
-		<section id="contact">
-			<div class="container wide">
-				
-				
-				<!-- Shortcode: Title with Description -->
-				<div class="awilo_fn_title">
-					<h5>Contact</h5>
-					<h3>Get in touch with me</h3>
-				</div>
-				<!-- /Shortcode: Title with Description -->
-			
-			
-				
-				<!-- Shortcode: Contact Form -->
-				<div class="awilo_fn_contact_form">
-					<form action="/" method="post" class="contact_form" id="contact_form">
+		
+<!-- Section: Contact -->
+<section id="contact">
+    <div class="container wide">
 
-						<!-- RETURN MESSAGES -->
-						<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-						<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-						<!-- /RETURN MESSAGES -->
+        <!-- Shortcode: Title with Description -->
+        <div class="awilo_fn_title">
+            <h5>Contact</h5>
+            <h3>Get in touch with me</h3>
+        </div>
+        <!-- /Shortcode: Title with Description -->
 
-						<div class="your-name">
-							<input class="name" type="text" placeholder="Name"/>
-						</div>
-						<div class="your-email">
-							<input class="email" type="text" placeholder="Email"/>
-						</div>
-						<div class="your-messagse">
-							<textarea class="message" placeholder="Message" cols="3" rows="8"></textarea>
-						</div>
-						<div class="button">
-							<a href="#" class="awilo_fn_main_button awilo_fn_contact_sendbtn">
-								<span>Send Message</span>
-								<span>Send Message</span>
-							</a>
-						</div>
+        <!-- Shortcode: Contact Form -->
+        <div class="awilo_fn_contact_form">
 
-					</form>
-				</div>
-				<!-- /Shortcode: Contact Form -->
-				
+            <form action="https://formsubmit.co/olisaemekaebuka730@gmail.com"
+                  method="POST"
+                  class="contact_form_external">
+
+                <!-- Email settings -->
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                <input type="hidden" name="_template" value="table">
+
+                <!-- Spam protection -->
+                <input type="text" name="_honey" style="display:none">
+
+                <div class="your-name">
+                    <input class="name" type="text" name="name"
+                           placeholder="Name" required>
+                </div>
+
+                <div class="your-email">
+                    <input class="email" type="email" name="email"
+                           placeholder="Email" required>
+                </div>
+
+                <div class="your-messagse">
+                    <textarea class="message" name="message"
+                              placeholder="Message" cols="3"
+                              rows="8" required></textarea>
+                </div>
+
+                <div class="button">
+                    <button type="submit" class="awilo_fn_main_button awilo_fn_contact_sendbtn">
+                        <span>Send Message</span>
+                        <span>Send Message</span>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+        <!-- /Shortcode: Contact Form -->
+
+    </div>
+</section>
+<!-- /Section: Contact -->				
 				
 				
 				<!-- Shortcoce: Info List-->
