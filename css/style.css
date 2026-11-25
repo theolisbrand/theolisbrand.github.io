@@ -2218,6 +2218,7 @@ a.awilo_fn_circle_link:hover:after{
 }
 
 
-.awilo_fn_footer {
+/* SPACE ABOVE FOOTER */
+footer {
     padding-top: 100px !important;
 }
