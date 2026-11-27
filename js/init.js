@@ -454,3 +454,33 @@ reviewSlider: function(){
     });
 
 })(jQuery);
+
+
+// Make all client review cards as tall as the tallest review
+jQuery(function($){
+
+    function equalReviewHeights(){
+
+        var cards = $('.awilo_fn_reviews .r_item_in');
+
+        cards.css('height', 'auto');
+
+        var maxHeight = 0;
+
+        cards.each(function(){
+            maxHeight = Math.max(
+                maxHeight,
+                this.getBoundingClientRect().height
+            );
+        });
+
+        cards.css('height', maxHeight + 'px');
+    }
+
+    equalReviewHeights();
+
+    $(window).on('load resize orientationchange', function(){
+        setTimeout(equalReviewHeights, 200);
+    });
+
+});
