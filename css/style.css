@@ -2223,3 +2223,46 @@ a.awilo_fn_circle_link:hover:after{
 #big_text {
     padding-top: 100px !important;
 }
+
+
+
+/* CLIENT REVIEWS — EQUAL HEIGHT CARDS */
+.awilo_fn_reviews .swiper-wrapper {
+    align-items: stretch;
+}
+
+.awilo_fn_reviews .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+.awilo_fn_reviews .r_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.awilo_fn_reviews .r_item .r_item_in {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    float: none;
+}
+
+.awilo_fn_reviews .r_item .r_review,
+.awilo_fn_reviews .r_item .r_desc,
+.awilo_fn_reviews .r_item .r_reviewer {
+    width: 100%;
+    float: none;
+    clear: none;
+}
+
+.awilo_fn_reviews .r_item .r_desc {
+    flex: 1;
+}
+
+.awilo_fn_reviews .r_item .r_reviewer {
+    margin-top: auto;
+}
