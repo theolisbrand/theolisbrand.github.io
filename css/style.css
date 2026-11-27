@@ -2227,40 +2227,11 @@ a.awilo_fn_circle_link:hover:after{
 
 
 
-/* CLIENT REVIEWS — FORCE EQUAL HEIGHTS */
-
-.awilo_fn_reviews .swiper-wrapper {
-    display: flex !important;
-    align-items: stretch !important;
-}
-
-.awilo_fn_reviews .swiper-slide {
-    height: auto !important;
-    display: flex !important;
-    align-items: stretch !important;
-}
-
-.awilo_fn_reviews .r_item {
-    display: flex !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-
+/* EQUAL HEIGHT CLIENT REVIEWS */
 .awilo_fn_reviews .r_item .r_item_in {
     display: flex !important;
     flex-direction: column !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 100% !important;
     box-sizing: border-box !important;
-}
-
-.awilo_fn_reviews .r_item .r_review,
-.awilo_fn_reviews .r_item .r_desc,
-.awilo_fn_reviews .r_item .r_reviewer {
-    float: none !important;
-    clear: none !important;
-    width: 100% !important;
 }
 
 .awilo_fn_reviews .r_item .r_desc {
